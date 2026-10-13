@@ -1,0 +1,192 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #243629;
+  background: #f5f8f2;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+  background:
+    linear-gradient(90deg, rgba(10, 35, 20, 0.88), rgba(10, 35, 20, 0.25)),
+    url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85')
+    center / cover no-repeat;
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  margin: 15px 0;
+  font-size: clamp(42px, 7vw, 78px);
+}
+
+.hero h2 {
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.hero p {
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.hero button {
+  background: #b6df8a;
+  color: #18351f;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 7px;
+  font-weight: bold;
+  margin: 20px 16px 0 0;
+}
+
+.hero button:hover {
+  background: #d0f1ae;
+}
+
+.hero a {
+  color: white;
+  margin-left: 10px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 18px 5%;
+  background: #173d2a;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  color: #c8eba9;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  padding-bottom: 18px;
+}
+
+.plant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.plant-card h3,
+.plant-card p {
+  margin: 12px 16px;
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  border: none;
+  border-radius: 6px;
+  padding: 11px 16px;
+  margin: 5px;
+}
+
+.primary-button {
+  background: #28643e;
+  color: white;
+}
+
+.primary-button:disabled {
+  background: #8b9d8d;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background: #e5eee4;
+  color: #243629;
+}
+
+.danger-button {
+  background: #a62c2c;
+  color: white;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #dce5da;
+}
+
+.cart-row img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 6%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-row {
+    grid-template-columns: 75px 1fr;
+  }
+
+  .cart-row img {
+    width: 75px;
+    height: 75px;
+  }
+}
